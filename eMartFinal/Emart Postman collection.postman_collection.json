@@ -1,0 +1,414 @@
+{
+	"info": {
+		"_postman_id": "821f5c00-de28-4a05-be34-98a174bf569a",
+		"name": "Emart Postman collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25722181",
+		"_collection_link": "https://interstellar-firefly-238332.postman.co/workspace/Team-Workspace~2d4bc13a-6af2-40f9-8c28-3790bdf1bedb/collection/25722181-821f5c00-de28-4a05-be34-98a174bf569a?action=share&source=collection_link&creator=25722181"
+	},
+	"item": [
+		{
+			"name": "item registry",
+			"item": [
+				{
+					"name": "Add item",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Asus A122225\",\r\n    \"description\":\"Asus gaming laptop\",\r\n    \"quantity\":\"1\",\r\n    \"price\":\"300000\",\r\n    \"addedBy\":\"jeorge\",\r\n    \"lastUpdated\":\"\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/api/item",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"item"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All items",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/api/item/getAllItems",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"item",
+								"getAllItems"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get item by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/api/item/getItem?id=48bac8c0-a3fe-48d3-871d-8acf68f408e7",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"item",
+								"getItem"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "48bac8c0-a3fe-48d3-871d-8acf68f408e7"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\":\"f5c24f34-7f38-46a0-81cb-a9be42c90fda\",\r\n    \"name\":\"DELL\",\r\n    \"description\":\"DELL Laptop\",\r\n    \"quantity\":\"21\",\r\n    \"price\":\"120000\",\r\n    \"addedBy\":\"U001\",\r\n    \"lastUpdated\":\"\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/api/item/updateItem",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"item",
+								"updateItem"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete item",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/api/item/deleteItem?id=f5c24f34-7f38-46a0-81cb-a9be42c90fda",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"item",
+								"deleteItem"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "f5c24f34-7f38-46a0-81cb-a9be42c90fda"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "order system",
+			"item": [
+				{
+					"name": "place order",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"orderLineItemsDtoList\":[\r\n        {\r\n        \"id\": \"066c2ce7-4af1-4719-a11f-ddcfcc569e92\",\r\n        \"name\": \"HP\",\r\n        \"description\": \"HP Laptop\",\r\n        \"quantity\": 1.0,\r\n        \"price\": 120000.0\r\n        },\r\n        {\r\n        \"id\": \"f5c24f34-7f38-46a0-81cb-a9be42c90fda\",\r\n        \"name\": \"DELL\",\r\n        \"description\": \"DELL Laptop\",\r\n        \"quantity\": 1.0,\r\n        \"price\": 120000.0\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/api/order",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"order"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get all orders",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/api/order/orders",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"order",
+								"orders"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "e0ff92c0-4d70-4c00-888a-edcd133b75a1",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User registry",
+			"item": [
+				{
+					"name": "register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"John\",\r\n    \"email\":\"john2@gmail.com\",\r\n    \"phoneNumber\":\"+61774877447\",\r\n    \"username\":\"john3\",\r\n    \"password\":\"J2@#pq1\",\r\n    \"roles\":[{\r\n                \"id\":\"1\",\r\n                \"name\":\"customer\"\r\n            }],\r\n    \"address\":\"45/1,Hill Street,Melbourn\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/api/user/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"user",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\":\"john3\",\r\n    \"password\":\"J2@#pq1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/api/user/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"user",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": \"076ae2b1-691a-4df1-a7ee-af31853ccc27\",\r\n    \"name\":\"AAAAAA\",\r\n    \"email\":\"aaaaa@gmail.com\",\r\n    \"phoneNumber\":\"0715426894\",\r\n    \"username\":\"aaaa\",\r\n    \"password\":\"Abc@123\",\r\n    \"roles\":[{\r\n                \"id\":\"1\",\r\n                \"name\":\"customer\"\r\n            }],\r\n    \"address\":\"colombo 07\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/api/user/updateUser",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"user",
+								"updateUser"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get all users",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/api/user/getAllUsers",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"user",
+								"getAllUsers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getUser",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/api/user/getUser?id=076ae2b1-691a-4df1-a7ee-af31853ccc27",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"user",
+								"getUser"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "076ae2b1-691a-4df1-a7ee-af31853ccc27"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "location",
+			"item": [
+				{
+					"name": "get location",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/api/location/350c4f3f-fc2a-4e72-b0d4-b0c2fbe137fa",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"location",
+								"350c4f3f-fc2a-4e72-b0d4-b0c2fbe137fa"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update tracking",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"orderId\":\"350c4f3f-fc2a-4e72-b0d4-b0c2fbe137fa\",\r\n    \"status\":\"pending\",\r\n    \"Location\":\"\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/api/location/update",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"location",
+								"update"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

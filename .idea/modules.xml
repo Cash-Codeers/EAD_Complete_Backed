@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/eMartFinal/ecommerce-app/core/core.iml" filepath="$PROJECT_DIR$/eMartFinal/ecommerce-app/core/core.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/eMartFinal.iml" filepath="$PROJECT_DIR$/.idea/eMartFinal.iml" />
+      <module fileurl="file://$PROJECT_DIR$/eMartFinal/ecommerce-app/ecommerce.app.iml" filepath="$PROJECT_DIR$/eMartFinal/ecommerce-app/ecommerce.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/eMartFinal/ecommerce-app/item-registry/item-registry.iml" filepath="$PROJECT_DIR$/eMartFinal/ecommerce-app/item-registry/item-registry.iml" />
+      <module fileurl="file://$PROJECT_DIR$/eMartFinal/ecommerce-app/location-handler/location-handler.iml" filepath="$PROJECT_DIR$/eMartFinal/ecommerce-app/location-handler/location-handler.iml" />
+      <module fileurl="file://$PROJECT_DIR$/eMartFinal/ecommerce-app/order-system/order-system.iml" filepath="$PROJECT_DIR$/eMartFinal/ecommerce-app/order-system/order-system.iml" />
+      <module fileurl="file://$PROJECT_DIR$/eMartFinal/ecommerce-app/user-registry/user-registry.iml" filepath="$PROJECT_DIR$/eMartFinal/ecommerce-app/user-registry/user-registry.iml" />
+    </modules>
+  </component>
+</project>
